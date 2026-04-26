@@ -1,0 +1,38 @@
+[
+  {
+    "category": "Saree",
+    "name": "Pure Kanjivaram Silk",
+    "price": "28,500.00",
+    "desc": "Traditional Gold Zari | Wedding Masterpiece"
+  },
+  {
+    "category": "Saree",
+    "name": "Heavy Bridal Banarasi",
+    "price": "42,000.00",
+    "desc": "Full Handwork | Royal Red Edition"
+  },
+  {
+    "category": "Lehenga",
+    "name": "Velvet Bridal Set",
+    "price": "65,000.00",
+    "desc": "Intricate Stone Work | Maharaja Collection"
+  },
+  {
+    "category": "Lehenga",
+    "name": "Organza Floral Fusion",
+    "price": "38,200.00",
+    "desc": "Lightweight Luxury | Summer Bridal Series"
+  },
+  {
+    "category": "Ethnic Wear",
+    "name": "Pure Silk Kurti Set",
+    "price": "12,500.00",
+    "desc": "Hand-painted motifs | Casual Premium"
+  },
+  {
+    "category": "Ethnic Wear",
+    "name": "Zardosi Anarkali",
+    "price": "22,900.00",
+    "desc": "Royal Flare | Celebration Tier Infrastructure"
+  }
+]

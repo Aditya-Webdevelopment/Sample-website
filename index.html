@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sovereign Boutique</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary: #4F46E5;
+    --secondary: #7C3AED;
+    --bg: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+}
+
+body, html {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    font-family: 'Inter', sans-serif;
+}
+
+/* NAVBAR (UPGRADED) */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 6%;
+}
+
+.brand-logo {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* HERO (FIXED POSITIONING) */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem; /* THIS brings image closer to button */
+    padding: 4rem 6%;
+    min-height: 85vh;
+}
+
+.hero-text {
+    max-width: 520px;
+}
+
+.hero-text h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+/* BUTTON (PREMIUM STYLE) */
+.btn-launch {
+    margin-top: 2rem;
+    padding: 0.9rem 2.2rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.btn-launch::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    background: white;
+    opacity: 0.2;
+    border-bottom-left-radius: 100%;
+}
+
+.btn-launch:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+}
+
+/* HERO IMAGE */
+.hero-img {
+    max-width: 380px; /* slightly smaller so it sits near button */
+}
+
+.hero-img img {
+    width: 100%;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img {
+        margin-top: 2rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="brand-logo">SOVEREIGN</div>
+
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Collections</a>
+        <a href="#">Products</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Gourisaria Sarees</h1>
+        <p>
+            Redefining elegance through heritage sarees crafted with precision, culture, and modern luxury aesthetics. Discover collections that elevate your identity.
+        </p>
+        <button class="btn-launch">Explore Now →</button>
+    </div>
+
+    <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2FyZWV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" alt="Saree Image">
+    </div>
+</section>
+
+</body>
+</html>
