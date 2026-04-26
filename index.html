@@ -19,6 +19,7 @@ body, html {
     margin: 0; padding: 0;
     background: var(--bg);
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden; /* ABSOLUTE RULE: Prevents side-to-side scrolling on mobile */
 }
 
 /* NAVBAR (UPGRADED) */
@@ -70,7 +71,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem; /* THIS brings image closer to button */
+    gap: 3rem; 
     padding: 4rem 6%;
     min-height: 85vh;
 }
@@ -81,8 +82,9 @@ nav {
 
 .hero-text h1 {
     font-family: 'Cinzel', serif;
-    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    font-size: clamp(2.5rem, 6vw, 4.5rem); /* Tweaked clamp for smoother mobile scaling */
     margin-bottom: 1rem;
+    line-height: 1.1;
 }
 
 .hero-text p {
@@ -124,26 +126,57 @@ nav {
 
 /* HERO IMAGE */
 .hero-img {
-    max-width: 380px; /* slightly smaller so it sits near button */
+    max-width: 380px; 
 }
 
 .hero-img img {
     width: 100%;
     filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+    border-radius: 12px; /* Slight rounding to make it look premium on phones */
 }
 
-/* RESPONSIVE */
+/* =========================================
+   THE ARCHITECT'S MOBILE OVERRIDE 
+   ========================================= */
 @media(max-width: 900px) {
     .hero {
         flex-direction: column;
         text-align: center;
+        padding: 2rem 5%; /* Tighter padding so it doesn't waste screen space */
+        gap: 1.5rem; /* Brings text and image closer */
+        min-height: auto; /* Let it breathe based on content */
+    }
+
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.8rem; /* Hard limit the text size so it doesn't break lines awkwardly */
+    }
+
+    .hero-text p {
+        font-size: 0.95rem; /* Slightly smaller, more legible text */
+        padding: 0 10px;
     }
 
     .hero-img {
-        margin-top: 2rem;
+        margin-top: 1rem;
+        max-width: 280px; /* Shrinks the image to fit perfectly on an iPhone screen */
+    }
+
+    /* Hide the sprawling desktop links on mobile, keep the logo centered and clean */
+    .nav-links {
+        display: none; 
+    }
+    
+    nav {
+        justify-content: center; /* Centers the brand logo when links are hidden */
+        padding: 1rem 5%;
     }
 }
-
 </style>
 </head>
 
